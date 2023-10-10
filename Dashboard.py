@@ -52,3 +52,10 @@ grade = ['Tropical Depression (TD)',
 data_ocurrence = pd.DataFrame(grade_ocurrence,grade)
 
 st.bar_chart(data_ocurrence)
+
+datetime_ocurrence = df.loc[:,'Date and Time']
+grades = df.loc[:,'Grade']
+
+grade_per_datetime = pd.DataFrame(datetime_ocurrence,grades)
+
+st.line_chart(grade_per_datetime)
